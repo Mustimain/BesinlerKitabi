@@ -5,6 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
+    <data>
+
+        <variable
+            name="secilenBesin"
+            type="com.example.besinlerkitabi.model.Besin" />
+    </data>
+
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,6 +27,7 @@
             android:minHeight="200dp"
             android:scaleType="fitCenter"
             android:layout_margin="10dp"
+            android:downloadImage="@{secilenBesin.besinGorsel}"
             >
 
         </ImageView>
@@ -32,7 +42,7 @@
             android:layout_marginTop="7dp"
             android:layout_marginEnd="7dp"
             android:layout_marginBottom="7dp"
-            android:text="Besin Ismi"
+            android:text="@{secilenBesin.besinIsim}"
             android:textSize="20sp"
             android:textStyle="bold"></TextView>
 
@@ -43,7 +53,7 @@
             android:layout_below="@id/besinIsmi"
             android:layout_centerHorizontal="true"
             android:layout_margin="7dp"
-            android:text="Besin Kalorisi"
+            android:text="@{secilenBesin.besinKalori}"
             android:textSize="18sp"
             android:textStyle="bold"></TextView>
 
@@ -57,7 +67,7 @@
             android:layout_marginTop="7dp"
             android:layout_marginEnd="7dp"
             android:layout_marginBottom="7dp"
-            android:text="Besin Karbonhidrat"
+            android:text="@{secilenBesin.besinKarbonhidrat}"
             android:textSize="18sp"
             android:textStyle="bold"></TextView>
 
@@ -71,7 +81,7 @@
             android:layout_marginTop="7dp"
             android:layout_marginEnd="7dp"
             android:layout_marginBottom="7dp"
-            android:text="Besin Protein"
+            android:text="@{secilenBesin.besinProtein}"
             android:textSize="18sp"
             android:textStyle="bold"></TextView>
 
@@ -85,7 +95,7 @@
             android:layout_marginTop="7dp"
             android:layout_marginEnd="7dp"
             android:layout_marginBottom="7dp"
-            android:text="Besin Yag"
+            android:text="@{secilenBesin.besinYag}"
             android:textSize="18sp"
             android:textStyle="bold"></TextView>
 
